@@ -1,0 +1,1443 @@
+[ 2015-09-03T15:26:18+08:00 ] 127.0.0.1 /app/admin/i
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.079186s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.116722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.227669s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.157615s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.157745s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.354659s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.354809s ]
+
+[ 2015-09-03T15:26:19+08:00 ] 127.0.0.1 /app/admin/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006335s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001365s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000625s ]
+
+[ 2015-09-03T15:26:25+08:00 ] 127.0.0.1 /app/admin/index/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001037s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006419s ]
+NOTIC: [2] http_build_query() [<a href='function.http-build-query'>function.http-build-query</a>]: Parameter 1 expected to be Array or Object.  Incorrect value given D:\Project\Apache2.2\htdocs\app\App\Admin\Plugin\GeetestPlugin.class.php 第 88 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.121144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.121270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.061811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.061922s ]
+
+[ 2015-09-03T15:26:36+08:00 ] 127.0.0.1 /app/admin/index/login/dosubmit/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.002844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004178s ]
+NOTIC: [2] http_build_query() [<a href='function.http-build-query'>function.http-build-query</a>]: Parameter 1 expected to be Array or Object.  Incorrect value given D:\Project\Apache2.2\htdocs\app\App\Admin\Plugin\GeetestPlugin.class.php 第 88 行.
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `app_times` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `app_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0157s ]
+SQL: SELECT * FROM `app_times` WHERE `username` = 'admin' AND `isadmin` = 1 LIMIT 1   [ RunTime:0.0283s ]
+NOTIC: [2] Illegal offset type in isset or empty D:\Project\Apache2.2\htdocs\app\Libs\ThinkPHP\Library\Think\Model.class.php 第 511 行.
+SQL: DELETE FROM `app_times` WHERE `username` = 'admin' [ RunTime:0.0013s ]
+SQL: UPDATE `app_admin` SET `lastloginip`='127.0.0.1',`lastlogintime`='1441265196' WHERE `userid` = 1 [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `app_admin_log` [ RunTime:0.0015s ]
+SQL: INSERT INTO `app_admin_log` (`userid`,`username`,`httpuseragent`,`ip`,`time`,`type`,`sessionid`) VALUES ('1','admin','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0','127.0.0.1','2015-09-03 15:26:36','login','5bi19ltqkibmrjc9im3jha42v7') [ RunTime:0.0013s ]
+
+[ 2015-09-03T15:26:36+08:00 ] 127.0.0.1 /app/admin/index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.002261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003812s ]
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `app_menu` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `app_admin_role` [ RunTime:0.0012s ]
+SQL: SELECT `userid`,`username`,`roleid`,`encrypt`,`lastloginip`,`lastlogintime`,`email`,`realname` FROM `app_admin` WHERE `userid` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `rolename` FROM `app_admin_role` WHERE `roleid` = 1 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT * FROM `app_menu` WHERE `parentid` = 0 AND `display` = 1 ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082204s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082318s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001306s ]
+
+[ 2015-09-03T15:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_main.html?_=1441265196601
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001099s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009017s ]
+SQL: SHOW COLUMNS FROM `app_admin` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `app_admin_role` [ RunTime:0.0018s ]
+SQL: SELECT `userid`,`username`,`roleid`,`encrypt`,`lastloginip`,`lastlogintime`,`email`,`realname` FROM `app_admin` WHERE `userid` = 1 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT `rolename` FROM `app_admin_role` WHERE `roleid` = 1 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `app_admin_log` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `app_admin_log` WHERE `userid` = 1 ORDER BY time desc LIMIT 5   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004580s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009257s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009410s ]
+
+[ 2015-09-03T15:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001254s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.038104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040251s ]
+SQL: SHOW COLUMNS FROM `app_menu` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `app_menu` WHERE `parentid` = 1 AND `display` = 1 ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `app_menu` WHERE `parentid` = 6 AND `display` = 1 ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.0010s ]
+
+[ 2015-09-03T15:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_donate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004824s ]
+
+[ 2015-09-03T15:26:40+08:00 ] 127.0.0.1 /app/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.002705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004306s ]
+SQL: SHOW COLUMNS FROM `app_menu` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `app_menu` WHERE `parentid` = 3 AND `display` = 1 ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `app_menu` WHERE `parentid` = 48 AND `display` = 1 ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `app_menu` WHERE `parentid` = 38 AND `display` = 1 ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.0007s ]
+
+[ 2015-09-03T15:26:41+08:00 ] 127.0.0.1 /app/admin/content/index/menuid/39.html?_=1441265196602
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.002662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004085s ]
+SQL: SHOW COLUMNS FROM `app_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `app_menu` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `app_menu` WHERE `id` = 38 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `app_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant currentpos - assumed 'currentpos' D:\Project\Apache2.2\htdocs\app\App\Admin\Controller\ContentController.class.php 第 55 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039908s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001204s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001373s ]
+
+[ 2015-09-03T15:26:41+08:00 ] 127.0.0.1 /app/admin/content/public_category.html?_=1441265196603
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004379s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000260s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031178s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031340s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000963s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001463s ]
+
+[ 2015-09-03T15:26:41+08:00 ] 127.0.0.1 /app/admin/content/public_welcome.html?_=1441265196604
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.002768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004136s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011917s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000841s ]
+
+[ 2015-09-03T15:26:41+08:00 ] 127.0.0.1 /app/admin/content/public_category.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004438s ]
+
+[ 2015-09-03T15:26:52+08:00 ] 127.0.0.1 /app/admin/content/page.html?catid=9&_=1441265196605
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.002146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003182s ]
+SQL: SHOW COLUMNS FROM `app_page` [ RunTime:0.0012s ]
+SQL: SELECT `content` FROM `app_page` WHERE `catid` = 9 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000993s ]
+
+[ 2015-09-03T15:26:52+08:00 ] 127.0.0.1 /app/admin/content/page/catid/9/grid/propertygrid.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.002091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003081s ]
+SQL: SHOW COLUMNS FROM `app_page` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `app_page` WHERE `catid` = 9 LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2015-09-03T15:26:52+08:00 ] 127.0.0.1 /app/admin/content/editor_iframe/catid/9/callback/contentPageModule.editor.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006952s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022099s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022254s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000901s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001200s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001368s ]
+
+[ 2015-09-03T15:29:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006083s ]
+
+[ 2015-09-03T15:31:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006005s ]
+
+[ 2015-09-03T15:34:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004786s ]
+
+[ 2015-09-03T15:36:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004883s ]
+
+[ 2015-09-03T15:39:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004756s ]
+
+[ 2015-09-03T15:41:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005896s ]
+
+[ 2015-09-03T15:44:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005949s ]
+
+[ 2015-09-03T15:46:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005962s ]
+
+[ 2015-09-03T15:49:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004821s ]
+
+[ 2015-09-03T15:51:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000935s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005092s ]
+
+[ 2015-09-03T15:54:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005816s ]
+
+[ 2015-09-03T15:56:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004722s ]
+
+[ 2015-09-03T15:59:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005592s ]
+
+[ 2015-09-03T16:01:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005237s ]
+
+[ 2015-09-03T16:04:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001208s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006623s ]
+
+[ 2015-09-03T16:06:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005685s ]
+
+[ 2015-09-03T16:09:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004861s ]
+
+[ 2015-09-03T16:11:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007167s ]
+
+[ 2015-09-03T16:14:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005464s ]
+
+[ 2015-09-03T16:16:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006540s ]
+
+[ 2015-09-03T16:19:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001113s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006131s ]
+
+[ 2015-09-03T16:21:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004874s ]
+
+[ 2015-09-03T16:24:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005500s ]
+
+[ 2015-09-03T16:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005696s ]
+
+[ 2015-09-03T16:29:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002338s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009281s ]
+
+[ 2015-09-03T16:31:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005084s ]
+
+[ 2015-09-03T16:34:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001017s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006889s ]
+
+[ 2015-09-03T16:36:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004865s ]
+
+[ 2015-09-03T16:39:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005964s ]
+
+[ 2015-09-03T16:41:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004898s ]
+
+[ 2015-09-03T16:44:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005699s ]
+
+[ 2015-09-03T16:46:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004750s ]
+
+[ 2015-09-03T16:49:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000961s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005849s ]
+
+[ 2015-09-03T16:51:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005448s ]
+
+[ 2015-09-03T16:54:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004859s ]
+
+[ 2015-09-03T16:56:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.008266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009674s ]
+
+[ 2015-09-03T16:59:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005598s ]
+
+[ 2015-09-03T17:01:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005417s ]
+
+[ 2015-09-03T17:04:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006079s ]
+
+[ 2015-09-03T17:06:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005063s ]
+
+[ 2015-09-03T17:09:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004875s ]
+
+[ 2015-09-03T17:11:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005178s ]
+
+[ 2015-09-03T17:14:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005171s ]
+
+[ 2015-09-03T17:16:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004897s ]
+
+[ 2015-09-03T17:19:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005947s ]
+
+[ 2015-09-03T17:21:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004807s ]
+
+[ 2015-09-03T17:24:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005671s ]
+
+[ 2015-09-03T17:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005802s ]
+
+[ 2015-09-03T17:29:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000950s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006240s ]
+
+[ 2015-09-03T17:31:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005772s ]
+
+[ 2015-09-03T17:34:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005662s ]
+
+[ 2015-09-03T17:36:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001048s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006660s ]
+
+[ 2015-09-03T17:39:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001052s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006374s ]
+
+[ 2015-09-03T17:41:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001057s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008170s ]
+
+[ 2015-09-03T17:44:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001462s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008420s ]
+
+[ 2015-09-03T17:46:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005334s ]
+
+[ 2015-09-03T17:49:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004817s ]
+
+[ 2015-09-03T17:51:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006048s ]
+
+[ 2015-09-03T17:54:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001211s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008540s ]
+
+[ 2015-09-03T17:56:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005125s ]
+
+[ 2015-09-03T17:59:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005799s ]
+
+[ 2015-09-03T18:01:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001551s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007239s ]
+
+[ 2015-09-03T18:04:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006030s ]
+
+[ 2015-09-03T18:06:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005883s ]
+
+[ 2015-09-03T18:09:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001493s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007853s ]
+
+[ 2015-09-03T18:11:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006067s ]
+
+[ 2015-09-03T18:14:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005716s ]
+
+[ 2015-09-03T18:16:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005236s ]
+
+[ 2015-09-03T18:19:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006103s ]
+
+[ 2015-09-03T18:21:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004747s ]
+
+[ 2015-09-03T18:24:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004840s ]
+
+[ 2015-09-03T18:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006177s ]
+
+[ 2015-09-03T18:29:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001088s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006719s ]
+
+[ 2015-09-03T18:31:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001438s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008668s ]
+
+[ 2015-09-03T18:34:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001115s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006970s ]
+
+[ 2015-09-03T18:36:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005108s ]
+
+[ 2015-09-03T18:39:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001523s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006919s ]
+
+[ 2015-09-03T18:41:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005068s ]
+
+[ 2015-09-03T18:44:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004850s ]
+
+[ 2015-09-03T18:46:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001494s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008402s ]
+
+[ 2015-09-03T18:49:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001414s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007295s ]
+
+[ 2015-09-03T18:51:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001055s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007723s ]
+
+[ 2015-09-03T18:54:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005906s ]
+
+[ 2015-09-03T18:56:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001234s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007671s ]
+
+[ 2015-09-03T18:59:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001433s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008564s ]
+
+[ 2015-09-03T19:01:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001517s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007728s ]
+
+[ 2015-09-03T19:04:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005895s ]
+
+[ 2015-09-03T19:06:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005329s ]
+
+[ 2015-09-03T19:09:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001497s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007230s ]
+
+[ 2015-09-03T19:11:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005154s ]
+
+[ 2015-09-03T19:14:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001097s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006698s ]
+
+[ 2015-09-03T19:16:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005107s ]
+
+[ 2015-09-03T19:19:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001166s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007395s ]
+
+[ 2015-09-03T19:21:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005022s ]
+
+[ 2015-09-03T19:24:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005114s ]
+
+[ 2015-09-03T19:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008078s ]
+
+[ 2015-09-03T19:29:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005817s ]
+
+[ 2015-09-03T19:31:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001169s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005657s ]
+
+[ 2015-09-03T19:34:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005531s ]
+
+[ 2015-09-03T19:36:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006153s ]
+
+[ 2015-09-03T19:39:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001158s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004204s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006115s ]
+
+[ 2015-09-03T19:41:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000910s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005302s ]
+
+[ 2015-09-03T19:44:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007078s ]
+
+[ 2015-09-03T19:46:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005677s ]
+
+[ 2015-09-03T19:49:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000849s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006184s ]
+
+[ 2015-09-03T19:51:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004933s ]
+
+[ 2015-09-03T19:54:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005944s ]
+
+[ 2015-09-03T19:56:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005674s ]
+
+[ 2015-09-03T19:59:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006445s ]
+
+[ 2015-09-03T20:01:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001209s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006745s ]
+
+[ 2015-09-03T20:04:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001050s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006517s ]
+
+[ 2015-09-03T20:06:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001199s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006796s ]
+
+[ 2015-09-03T20:09:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001029s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004173s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005943s ]
+
+[ 2015-09-03T20:11:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005142s ]
+
+[ 2015-09-03T20:14:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006539s ]
+
+[ 2015-09-03T20:16:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001188s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005932s ]
+
+[ 2015-09-03T20:19:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.008036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009926s ]
+
+[ 2015-09-03T20:21:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005179s ]
+
+[ 2015-09-03T20:24:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001389s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006999s ]
+
+[ 2015-09-03T20:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001246s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007858s ]
+
+[ 2015-09-03T20:29:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006596s ]
+
+[ 2015-09-03T20:31:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006136s ]
+
+[ 2015-09-03T20:34:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001384s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008480s ]
+
+[ 2015-09-03T20:36:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005377s ]
+
+[ 2015-09-03T20:39:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007230s ]
+
+[ 2015-09-03T20:41:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006163s ]
+
+[ 2015-09-03T20:44:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001330s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007908s ]
+
+[ 2015-09-03T20:46:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005511s ]
+
+[ 2015-09-03T20:49:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005554s ]
+
+[ 2015-09-03T20:51:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005805s ]
+
+[ 2015-09-03T20:54:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006015s ]
+
+[ 2015-09-03T20:56:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004850s ]
+
+[ 2015-09-03T20:59:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004824s ]
+
+[ 2015-09-03T21:01:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004947s ]
+
+[ 2015-09-03T21:04:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001065s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.025234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027108s ]
+
+[ 2015-09-03T21:06:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006577s ]
+
+[ 2015-09-03T21:09:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001387s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008063s ]
+
+[ 2015-09-03T21:11:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005523s ]
+
+[ 2015-09-03T21:14:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006263s ]
+
+[ 2015-09-03T21:16:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004801s ]
+
+[ 2015-09-03T21:19:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001252s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007420s ]
+
+[ 2015-09-03T21:21:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006311s ]
+
+[ 2015-09-03T21:24:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005044s ]
+
+[ 2015-09-03T21:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000934s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007685s ]
+
+[ 2015-09-03T21:29:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001109s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006746s ]
+
+[ 2015-09-03T21:31:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005056s ]
+
+[ 2015-09-03T21:34:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005106s ]
+
+[ 2015-09-03T21:36:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005605s ]
+
+[ 2015-09-03T21:39:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005939s ]
+
+[ 2015-09-03T21:41:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005733s ]
+
+[ 2015-09-03T21:44:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006026s ]
+
+[ 2015-09-03T21:46:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005124s ]
+
+[ 2015-09-03T21:49:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002314s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.007935s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011789s ]
+
+[ 2015-09-03T21:51:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005315s ]
+
+[ 2015-09-03T21:54:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005318s ]
+
+[ 2015-09-03T21:56:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006139s ]
+
+[ 2015-09-03T21:59:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004853s ]
+
+[ 2015-09-03T22:01:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006423s ]
+
+[ 2015-09-03T22:04:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004866s ]
+
+[ 2015-09-03T22:06:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004954s ]
+
+[ 2015-09-03T22:09:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005354s ]
+
+[ 2015-09-03T22:11:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004753s ]
+
+[ 2015-09-03T22:14:39+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004853s ]
+
+[ 2015-09-03T22:16:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.002812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004499s ]
+
+[ 2015-09-03T22:19:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005140s ]
+
+[ 2015-09-03T22:21:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.003709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005137s ]
+
+[ 2015-09-03T22:24:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001361s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008290s ]
+
+[ 2015-09-03T22:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001226s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007864s ]
+
+[ 2015-09-03T22:29:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001590s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008916s ]
+
+[ 2015-09-03T22:31:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007721s ]
+
+[ 2015-09-03T22:34:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001223s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008350s ]
+
+[ 2015-09-03T22:36:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001367s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008853s ]
+
+[ 2015-09-03T22:39:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001535s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.007313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009726s ]
+
+[ 2015-09-03T22:41:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001810s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.008428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011236s ]
+
+[ 2015-09-03T22:44:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002304s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.011410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014953s ]
+
+[ 2015-09-03T22:46:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001592s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008806s ]
+
+[ 2015-09-03T22:49:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001771s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.008520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011278s ]
+
+[ 2015-09-03T22:51:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001527s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008431s ]
+
+[ 2015-09-03T22:54:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002030s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.008837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012977s ]
+
+[ 2015-09-03T22:56:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001650s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007872s ]
+
+[ 2015-09-03T22:59:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001251s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007018s ]
+
+[ 2015-09-03T23:01:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001219s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007078s ]
+
+[ 2015-09-03T23:04:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001539s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008882s ]
+
+[ 2015-09-03T23:06:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001204s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006999s ]
+
+[ 2015-09-03T23:09:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001207s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.006125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008021s ]
+
+[ 2015-09-03T23:11:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001578s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007766s ]
+
+[ 2015-09-03T23:14:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001941s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.009829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012905s ]
+
+[ 2015-09-03T23:16:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001376s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.004926s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007120s ]
+
+[ 2015-09-03T23:19:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001392s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007579s ]
+
+[ 2015-09-03T23:21:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001434s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008105s ]
+
+[ 2015-09-03T23:24:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007612s ]
+
+[ 2015-09-03T23:26:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001302s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007149s ]
+
+[ 2015-09-03T23:29:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001367s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.007312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009409s ]
+
+[ 2015-09-03T23:31:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001456s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.026083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028283s ]
+
+[ 2015-09-03T23:34:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002279s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.008155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011958s ]
+
+[ 2015-09-03T23:36:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001505s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008083s ]
+
+[ 2015-09-03T23:39:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001289s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007487s ]
+
+[ 2015-09-03T23:41:37+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001196s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007280s ]
+
+[ 2015-09-03T23:44:07+08:00 ] 127.0.0.1 /app/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001345s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.005573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007676s ]
+

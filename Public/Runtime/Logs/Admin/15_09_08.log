@@ -1,0 +1,15 @@
+[ 2015-09-08T20:02:44+08:00 ] 127.0.0.1 /app/admin/upload/crop.html?subfix=_1x1&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14417137623331
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013033s ]
+INFO: Run Common\Behavior\SettingBehavior [ RunTime:0.051134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.070578s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000618s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.096782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014487s ]
+

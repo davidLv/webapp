@@ -1,0 +1,31 @@
+<?php if (!defined('THINK_PATH')) exit();?><div class="easyui-layout" data-options="fit:true,border:false" style="margin:-1px 0 0 -1px">
+	<div data-options="region:'west',width: 200, title:'栏目菜单', href: '<?php echo U('Content/public_category');?>', iconCls:'icons-application-application_side_tree',border:true,split:true,width:220" style="border-bottom: none"></div>
+	<div id="content-index-panel" data-options="region:'center',title:'<?php echo ($currentpos); ?>',border:true,href:'<?php echo U('Content/public_welcome');?>'" style="border-bottom: none"></div>
+</div>
+
+<script type="text/javascript">
+//如果左侧展开则进行隐藏
+if(!$('body').layout('panel', 'west').panel("options").collapsed){
+	setTimeout(function(){$('body').layout('collapse', 'west');}, 500);
+}
+var contentBaseModule = {
+	panel: '#content-index-panel',
+	
+	//打开页面
+	openUrl: function(url, iframe, crumbs){
+		//如果左侧展开则进行隐藏
+		if(!$('body').layout('panel', 'west').panel("options").collapsed){
+			setTimeout(function(){$('body').layout('collapse', 'west');}, 500);
+		}
+
+		title = crumbs ? '<?php echo ($currentpos); ?> ' + crumbs : (title ? title : '<?php echo ($currentpos); ?> ');
+		if(!url){
+			$.app.method.tip('提示信息', '链接地址不存在', 'error');
+			return false;
+		}
+		var data = iframe ? {title: title , href: null, content: '<iframe src="'+ url +'" frameborder="0" fit="true" border="none" width="100%" height="100%" style="margin-bottom:-5px"></iframe>'} : {title: title , href: url};
+		$(this.panel).panel(data);
+	}
+}
+
+</script>
